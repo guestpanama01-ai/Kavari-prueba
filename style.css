@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #6eb1ff;
+    overflow-x: hidden;
+    color: white;
+}
+
+/* =========================
+   HERO CON VIDEO
+========================= */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    padding: 30px 70px;
+}
+
+/* VIDEO */
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -2;
+}
+
+/* CAPA OSCURA */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.45);
+
+    z-index: -1;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #8fd3ff;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    margin-top: 140px;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 85px;
+    line-height: 1;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 26px;
+    line-height: 1.5;
+}
+
+/* =========================
+   CAJA BLANCA
+========================= */
+
+.search-box {
+    width: 90%;
+    margin: -60px auto 60px;
+
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 35px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+
+    position: relative;
+    z-index: 10;
+}
+
+.search-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-content h2 {
+    font-size: 38px;
+    color: #163b80;
+}
+
+.search-content p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.search-content button {
+    background: #2e6edc;
+    color: white;
+
+    border: none;
+
+    padding: 18px 40px;
+
+    border-radius: 40px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-content button:hover {
+    background: #1d4ea3;
+    transform: scale(1.05);
+}
+
+/* =========================
+   DESTINOS
+========================= */
+
+.featured-section {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 70px;
+}
+
+.featured-section h2 {
+    text-align: center;
+    font-size: 50px;
+    color: #0f2d66;
+    margin-bottom: 40px;
+}
+
+/* GRID */
+
+.cards-container {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 25px;
+}
+
+/* TARJETAS */
+
+.card {
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.card-content h3 {
+    color: #163b80;
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.card-content p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.card-content a {
+    text-decoration: none;
+
+    background: #2e6edc;
+
+    color: white;
+
+    padding: 10px 22px;
+
+    border-radius: 25px;
+
+    display: inline-block;
+}
+
+/* =========================
+   LUGARES GRANDES
+========================= */
+
+.places-section {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 80px;
+}
+
+.place-card {
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+    transition: 0.3s;
+}
+
+.place-card:hover {
+    transform: scale(1.01);
+}
+
+.place-card img {
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.place-info {
+    padding: 30px;
+}
+
+.place-info span {
+    color: #2e6edc;
+    font-weight: 600;
+}
+
+.place-info h3 {
+    color: #163b80;
+    font-size: 34px;
+    margin: 12px 0;
+}
+
+.place-info p {
+    color: #555;
+    font-size: 18px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 25px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content {
+        margin-top: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 55px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .search-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-content h2 {
+        font-size: 30px;
+    }
+
+    .place-card {
+        flex-direction: column;
+    }
+
+    .place-card img {
+        width: 100%;
+    }
+}
